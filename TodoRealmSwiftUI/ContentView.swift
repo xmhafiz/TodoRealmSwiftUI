@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var taskTitle: String = ""
+    @ObservedObject private var viewModel = TaskViewModel()
+    
     var body: some View {
-        Text("Hello!")
+        NavigationView {
+            VStack {
+                CreateTaskView(viewModel: viewModel)
+                ScrollView {
+                    LazyVStack (alignment: .leading) {
+                        ForEach(viewModel.tasks, id: \.id) { task in
+                            TaskRowView(task: task)
+                            Divider().padding(.leading, 20)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Todo")
+            .navigationBarTitleDisplayMode(.automatic)
+        }
     }
 }
 
