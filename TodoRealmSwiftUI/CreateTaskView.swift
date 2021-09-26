@@ -12,10 +12,11 @@ struct CreateTaskView: View {
     @EnvironmentObject private var viewModel: TaskViewModel
     
     var body: some View {
-        HStack (spacing: 12) {
+        HStack(spacing: 12) {
             TextField("Enter New Task..", text: $taskTitle)
-            Button("Submit", action: handleSubmit)
-                .font(Font.system(size: 16, weight: .bold))
+            Button(action: handleSubmit) {
+                Image(systemName: "plus")
+            }
         }
         .padding(20)
     }

@@ -20,6 +20,7 @@
 		867E431426FEBD9100C9067A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867E431326FEBD9100C9067A /* ContentView.swift */; };
 		867E431626FEBD9500C9067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867E431526FEBD9500C9067A /* Assets.xcassets */; };
 		867E431926FEBD9500C9067A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867E431826FEBD9500C9067A /* Preview Assets.xcassets */; };
+		86A89A212700C4FD00CA1E90 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A89A202700C4FD00CA1E90 /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		867E431526FEBD9500C9067A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		867E431826FEBD9500C9067A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		867E431A26FEBD9500C9067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A89A202700C4FD00CA1E90 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				8607F89C270065F300770627 /* TaskListView.swift */,
 				860BA67826FEF5A300504561 /* TaskRowView.swift */,
 				860BA67C26FF036800504561 /* CreateTaskView.swift */,
+				86A89A202700C4FD00CA1E90 /* TaskView.swift */,
 				860BA67526FEC54100504561 /* ViewModels */,
 				860BA67226FEC4A900504561 /* Models */,
 				860BA67E26FF266500504561 /* Realm */,
@@ -197,6 +200,7 @@
 				860BA67926FEF5A300504561 /* TaskRowView.swift in Sources */,
 				867E431426FEBD9100C9067A /* ContentView.swift in Sources */,
 				8607F89D270065F300770627 /* TaskListView.swift in Sources */,
+				86A89A212700C4FD00CA1E90 /* TaskView.swift in Sources */,
 				860BA67726FEEFBA00504561 /* TaskViewModel.swift in Sources */,
 				860BA67D26FF036800504561 /* CreateTaskView.swift in Sources */,
 				860BA67426FEC4BE00504561 /* Task.swift in Sources */,

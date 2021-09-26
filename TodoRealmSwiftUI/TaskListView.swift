@@ -13,9 +13,12 @@ struct TaskListView: View {
         ScrollView {
             LazyVStack (alignment: .leading) {
                 ForEach(viewModel.tasks, id: \.id) { task in
-                    TaskRowView(task: task)
+                    NavigationLink (destination: TaskView(task: task)) {
+                        TaskRowView(task: task)
+                    }
                     Divider().padding(.leading, 20)
                 }
+                .animation(.default)
             }
         }
     }

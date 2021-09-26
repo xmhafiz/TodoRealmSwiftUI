@@ -11,6 +11,7 @@ struct Task: Identifiable {
     let id: String
     let title: String
     let completed: Bool
+    var updatedAt: Date = Date()
     
     init(id: String = UUID().uuidString, title: String, completed: Bool = false) {
         self.title = title
@@ -22,5 +23,6 @@ struct Task: Identifiable {
         self.id = taskObject.id.stringValue
         self.title = taskObject.title
         self.completed = taskObject.completed
+        self.updatedAt = taskObject.completedAt
     }
 }
