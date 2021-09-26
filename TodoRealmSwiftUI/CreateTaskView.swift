@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateTaskView: View {
     @State private var taskTitle: String = ""
-    let viewModel: TaskViewModel
+    @EnvironmentObject private var viewModel: TaskViewModel
     
     var body: some View {
         HStack (spacing: 12) {
@@ -28,7 +28,6 @@ struct CreateTaskView: View {
 
 struct CreateTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = TaskViewModel()
-        CreateTaskView(viewModel: viewModel)
+        CreateTaskView()
     }
 }

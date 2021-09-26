@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskRowView: View {
     let task: Task
-    let viewModel: TaskViewModel
+    @EnvironmentObject private var viewModel: TaskViewModel
     var body: some View {
         HStack (spacing: 8) {
             Button(action: {
@@ -17,7 +17,7 @@ struct TaskRowView: View {
             }) {
                 Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
                     .resizable()
-                    .frame(width: 18, height: 18)
+                    .frame(width: 20, height: 20)
                     .foregroundColor(task.completed ? Color.green : Color.gray)
             }
             Text(task.title)
@@ -29,7 +29,6 @@ struct TaskRowView: View {
 struct TaskRowView_Previews: PreviewProvider {
     static var previews: some View {
         let mockTask = Task(title: "Example 1")
-        let vm = TaskViewModel()
-        TaskRowView(task: mockTask, viewModel: vm)
+        TaskRowView(task: mockTask)
     }
 }

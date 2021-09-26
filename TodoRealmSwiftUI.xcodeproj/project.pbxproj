@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8607F89B270042B100770627 /* TaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607F89A270042B100770627 /* TaskObject.swift */; };
+		8607F89D270065F300770627 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607F89C270065F300770627 /* TaskListView.swift */; };
 		860BA67426FEC4BE00504561 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67326FEC4BE00504561 /* Task.swift */; };
 		860BA67726FEEFBA00504561 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67626FEEFBA00504561 /* TaskViewModel.swift */; };
 		860BA67926FEF5A300504561 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67826FEF5A300504561 /* TaskRowView.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		8607F89A270042B100770627 /* TaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskObject.swift; sourceTree = "<group>"; };
+		8607F89C270065F300770627 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		860BA67326FEC4BE00504561 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		860BA67626FEEFBA00504561 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		860BA67826FEF5A300504561 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				867E431126FEBD9100C9067A /* TodoRealmSwiftUIApp.swift */,
 				867E431326FEBD9100C9067A /* ContentView.swift */,
+				8607F89C270065F300770627 /* TaskListView.swift */,
 				860BA67826FEF5A300504561 /* TaskRowView.swift */,
 				860BA67C26FF036800504561 /* CreateTaskView.swift */,
 				860BA67526FEC54100504561 /* ViewModels */,
@@ -193,6 +196,7 @@
 			files = (
 				860BA67926FEF5A300504561 /* TaskRowView.swift in Sources */,
 				867E431426FEBD9100C9067A /* ContentView.swift in Sources */,
+				8607F89D270065F300770627 /* TaskListView.swift in Sources */,
 				860BA67726FEEFBA00504561 /* TaskViewModel.swift in Sources */,
 				860BA67D26FF036800504561 /* CreateTaskView.swift in Sources */,
 				860BA67426FEC4BE00504561 /* Task.swift in Sources */,
