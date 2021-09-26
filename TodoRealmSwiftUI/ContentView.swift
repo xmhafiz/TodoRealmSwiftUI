@@ -18,7 +18,7 @@ struct ContentView: View {
                 ScrollView {
                     LazyVStack (alignment: .leading) {
                         ForEach(viewModel.tasks, id: \.id) { task in
-                            TaskRowView(task: task)
+                            TaskRowView(task: task, viewModel: viewModel)
                             Divider().padding(.leading, 20)
                         }
                     }
