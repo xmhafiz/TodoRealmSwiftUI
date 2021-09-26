@@ -8,7 +8,19 @@
 import Foundation
 
 struct Task: Identifiable {
-    let id = UUID()
-    var title: String
-    var completed: Bool = false
+    let id: String
+    let title: String
+    let completed: Bool
+    
+    init(id: String = UUID().uuidString, title: String, completed: Bool = false) {
+        self.title = title
+        self.id = id
+        self.completed = completed
+    }
+    
+    init(taskObject: TaskObject) {
+        self.id = taskObject.id.stringValue
+        self.title = taskObject.title
+        self.completed = taskObject.completed
+    }
 }

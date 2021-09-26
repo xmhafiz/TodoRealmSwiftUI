@@ -12,14 +12,16 @@ final class TaskViewModel: ObservableObject {
     @Published var tasks: [Task] = []
     
     init() {
-        tasks = [
-            Task(title: "Task 1"),
-            Task(title: "Task 2"),
-            Task(title: "Task 3", completed: true)
-        ]
+        getTask()
     }
     
-    func addTask(_ task: Task) {
-        tasks.append(task)
+    func addTask(title: String) {
+        TaskStore.shared.createTask(title: title)
+        getTask()
     }
+    
+    private func getTask() {
+        tasks = TaskStore.shared.allTasks()
+    }
+    
 }

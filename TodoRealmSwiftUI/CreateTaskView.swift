@@ -21,8 +21,8 @@ struct CreateTaskView: View {
     }
     
     private func handleSubmit() {
-        let task = Task(title: taskTitle)
-        viewModel.addTask(task)
+        viewModel.addTask(title: taskTitle)
+        taskTitle = ""
     }
 }
 
