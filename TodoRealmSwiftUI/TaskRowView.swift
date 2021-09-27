@@ -13,7 +13,7 @@ struct TaskRowView: View {
     var body: some View {
         HStack(spacing: 8) {
             Button(action: {
-                viewModel.markComplete(task: task)
+                viewModel.markComplete(id: task.id, completed: !task.completed)
             }) {
                 Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
                     .resizable()
@@ -30,7 +30,8 @@ struct TaskRowView: View {
 
 struct TaskRowView_Previews: PreviewProvider {
     static var previews: some View {
-        let mockTask = Task(title: "Example 1")
+        let object = TaskObject(value: ["title": "Example Task 1", "completed": true])
+        let mockTask = Task(taskObject: object)
         TaskRowView(task: mockTask)
     }
 }

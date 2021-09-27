@@ -13,7 +13,6 @@
 		860BA67726FEEFBA00504561 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67626FEEFBA00504561 /* TaskViewModel.swift */; };
 		860BA67926FEF5A300504561 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67826FEF5A300504561 /* TaskRowView.swift */; };
 		860BA67D26FF036800504561 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67C26FF036800504561 /* CreateTaskView.swift */; };
-		860BA68026FF26AA00504561 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860BA67F26FF26AA00504561 /* TaskStore.swift */; };
 		860BA68326FF280500504561 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 860BA68226FF280500504561 /* Realm */; };
 		860BA68526FF280500504561 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 860BA68426FF280500504561 /* RealmSwift */; };
 		867E431226FEBD9100C9067A /* TodoRealmSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867E431126FEBD9100C9067A /* TodoRealmSwiftUIApp.swift */; };
@@ -31,7 +30,6 @@
 		860BA67626FEEFBA00504561 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		860BA67826FEF5A300504561 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		860BA67C26FF036800504561 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
-		860BA67F26FF26AA00504561 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 		867E430E26FEBD9100C9067A /* TodoRealmSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoRealmSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		867E431126FEBD9100C9067A /* TodoRealmSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRealmSwiftUIApp.swift; sourceTree = "<group>"; };
 		867E431326FEBD9100C9067A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				860BA67326FEC4BE00504561 /* Task.swift */,
+				8607F89A270042B100770627 /* TaskObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,15 +68,6 @@
 				860BA67626FEEFBA00504561 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		860BA67E26FF266500504561 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				860BA67F26FF26AA00504561 /* TaskStore.swift */,
-				8607F89A270042B100770627 /* TaskObject.swift */,
-			);
-			path = Realm;
 			sourceTree = "<group>";
 		};
 		867E430526FEBD9100C9067A = {
@@ -108,7 +98,6 @@
 				86A89A202700C4FD00CA1E90 /* TaskView.swift */,
 				860BA67526FEC54100504561 /* ViewModels */,
 				860BA67226FEC4A900504561 /* Models */,
-				860BA67E26FF266500504561 /* Realm */,
 				867E431526FEBD9500C9067A /* Assets.xcassets */,
 				867E431A26FEBD9500C9067A /* Info.plist */,
 				867E431726FEBD9500C9067A /* Preview Content */,
@@ -210,7 +199,6 @@
 				860BA67426FEC4BE00504561 /* Task.swift in Sources */,
 				8607F89B270042B100770627 /* TaskObject.swift in Sources */,
 				867E431226FEBD9100C9067A /* TodoRealmSwiftUIApp.swift in Sources */,
-				860BA68026FF26AA00504561 /* TaskStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

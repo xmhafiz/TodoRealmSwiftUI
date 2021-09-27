@@ -41,11 +41,11 @@ struct TaskView: View {
     }
     
     private func updateTask() {
-        viewModel.updateTitle(id: task.id, title: taskTitle)
+        viewModel.updateTitle(id: task.id, newTitle: taskTitle)
     }
     
     private func deleteAction() {
-        viewModel.remove(task: task)
+        viewModel.remove(id: task.id)
         presentationMode.wrappedValue.dismiss()
     }
 }

@@ -8,16 +8,10 @@
 import Foundation
 
 struct Task: Identifiable {
-    let id: String
-    let title: String
-    let completed: Bool
+    var id: String
+    var title: String
+    var completed: Bool
     var updatedAt: Date = Date()
-    
-    init(id: String = UUID().uuidString, title: String, completed: Bool = false) {
-        self.title = title
-        self.id = id
-        self.completed = completed
-    }
     
     init(taskObject: TaskObject) {
         self.id = taskObject.id.stringValue
