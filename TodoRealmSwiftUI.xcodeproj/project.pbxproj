@@ -21,6 +21,7 @@
 		867E431626FEBD9500C9067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867E431526FEBD9500C9067A /* Assets.xcassets */; };
 		867E431926FEBD9500C9067A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867E431826FEBD9500C9067A /* Preview Assets.xcassets */; };
 		86A89A212700C4FD00CA1E90 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A89A202700C4FD00CA1E90 /* TaskView.swift */; };
+		86A89A2327015A4400CA1E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A89A2227015A4400CA1E90 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		867E431826FEBD9500C9067A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		867E431A26FEBD9500C9067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A89A202700C4FD00CA1E90 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		86A89A2227015A4400CA1E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		867E431026FEBD9100C9067A /* TodoRealmSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				86A89A2227015A4400CA1E90 /* AppDelegate.swift */,
 				867E431126FEBD9100C9067A /* TodoRealmSwiftUIApp.swift */,
 				867E431326FEBD9100C9067A /* ContentView.swift */,
 				8607F89C270065F300770627 /* TaskListView.swift */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A89A2327015A4400CA1E90 /* AppDelegate.swift in Sources */,
 				860BA67926FEF5A300504561 /* TaskRowView.swift in Sources */,
 				867E431426FEBD9100C9067A /* ContentView.swift in Sources */,
 				8607F89D270065F300770627 /* TaskListView.swift in Sources */,
