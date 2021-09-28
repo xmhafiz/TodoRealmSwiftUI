@@ -1,5 +1,7 @@
 ## Description
-Simple Todo apps using SwiftUI and Realm
+Simple Todo apps using SwiftUI and [RealmSwift](https://github.com/realm/realm-cocoa)
+
+![screenshot](screenshot.png)
 
 ### Specification
 
