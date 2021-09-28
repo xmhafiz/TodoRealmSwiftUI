@@ -25,17 +25,18 @@ struct TaskView: View {
             Button(action: deleteAction) {
                 HStack {
                     Image(systemName: "trash.fill")
-                    Text("Delete")
+                    Text("Delete").bold()
                 }
-                .foregroundColor(Color.red)
             }
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(Color.red)
+            .foregroundColor(Color.white)
             Spacer()
         }
         .navigationBarTitle("Edit Todo", displayMode: .inline)
         .padding(24)
         .onAppear(perform: {
             taskTitle = task.title
-            
         })
         .onDisappear(perform: updateTask)
     }

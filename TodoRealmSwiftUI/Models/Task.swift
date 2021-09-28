@@ -10,13 +10,13 @@ import Foundation
 struct Task: Identifiable {
     var id: String
     var title: String
-    var completed: Bool
-    var updatedAt: Date = Date()
+    var completed: Bool = false
+    var completedAt: Date = Date()
     
     init(taskObject: TaskObject) {
         self.id = taskObject.id.stringValue
         self.title = taskObject.title
         self.completed = taskObject.completed
-        self.updatedAt = taskObject.completedAt
+        self.completedAt = taskObject.completedAt
     }
 }

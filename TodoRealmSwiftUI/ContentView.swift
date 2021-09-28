@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                CreateTaskView()
+                AddTaskView()
                 TaskListView()
             }
             .navigationTitle("Todo")

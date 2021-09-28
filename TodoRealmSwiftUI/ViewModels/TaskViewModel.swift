@@ -28,7 +28,7 @@ final class TaskViewModel: ObservableObject {
             
             token = results.observe({ [weak self] changes in
                 self?.tasks = results.map(Task.init)
-                    .sorted(by: { $0.updatedAt > $1.updatedAt })
+                    .sorted(by: { $0.completedAt > $1.completedAt })
                     .sorted(by: { !$0.completed && $1.completed })
             })
         } catch let error {

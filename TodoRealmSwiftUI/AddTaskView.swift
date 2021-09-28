@@ -1,4 +1,4 @@
-//
+////
 //  CreateTaskView.swift
 //  TodoRealmSwiftUI
 //
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CreateTaskView: View {
+struct AddTaskView: View {
     @State private var taskTitle: String = ""
     @EnvironmentObject private var viewModel: TaskViewModel
     
@@ -29,6 +29,6 @@ struct CreateTaskView: View {
 
 struct CreateTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateTaskView()
+        AddTaskView()
     }
 }
