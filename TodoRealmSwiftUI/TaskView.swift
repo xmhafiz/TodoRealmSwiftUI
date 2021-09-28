@@ -11,17 +11,30 @@ struct TaskView: View {
     @EnvironmentObject private var viewModel: TaskViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var taskTitle: String = ""
+    @State private var selectedDate: Date = Date()
+    @State private var enableDueDate = false
     let task: Task
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 12) {
                 Text("Title")
                     .foregroundColor(Color.gray)
                 TextField("Enter title..", text: $taskTitle)
-                    .font(.largeTitle)
+                    .font(.title)
                 Divider()
             }
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Due Date")
+                    .foregroundColor(Color.gray)
+                Toggle("Enabled", isOn: $enableDueDate)
+                if  enableDueDate {
+                    DatePicker("", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                }
+                Divider()
+            }
+            Spacer()
             Button(action: deleteAction) {
                 HStack {
                     Image(systemName: "trash.fill")
@@ -31,7 +44,6 @@ struct TaskView: View {
             .frame(maxWidth: .infinity, minHeight: 50)
             .background(Color.red)
             .foregroundColor(Color.white)
-            Spacer()
         }
         .navigationBarTitle("Edit Todo", displayMode: .inline)
         .padding(24)
@@ -42,7 +54,9 @@ struct TaskView: View {
     }
     
     private func updateTask() {
-        viewModel.updateTitle(id: task.id, newTitle: taskTitle)
+        let dueDate: Date? = enableDueDate ? selectedDate : nil
+        print(dueDate)
+        viewModel.update(id: task.id, newTitle: taskTitle, dueDate: dueDate)
     }
     
     private func deleteAction() {

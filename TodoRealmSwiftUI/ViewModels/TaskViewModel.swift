@@ -79,13 +79,14 @@ final class TaskViewModel: ObservableObject {
         }
     }
     
-    func updateTitle(id: String, newTitle: String) {
+    func update(id: String, newTitle: String, dueDate: Date?) {
         do {
             let realm = try Realm()
             let objectId = try ObjectId(string: id)
             let task = realm.object(ofType: TaskObject.self, forPrimaryKey: objectId)
             try realm.write {
                 task?.title = newTitle
+                task?.dueDate = dueDate
             }
         } catch let error {
             print(error.localizedDescription)

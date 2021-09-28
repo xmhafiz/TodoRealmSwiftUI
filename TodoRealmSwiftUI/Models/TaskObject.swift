@@ -13,4 +13,6 @@ class TaskObject: Object {
     @Persisted var title: String
     @Persisted var completed: Bool = false
     @Persisted var completedAt: Date = Date()
+    // new field
+    @Persisted var dueDate: Date? = nil
 }

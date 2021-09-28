@@ -11,7 +11,7 @@ struct TaskRowView: View {
     let task: Task
     @EnvironmentObject private var viewModel: TaskViewModel
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 12) {
             Button(action: {
                 viewModel.markComplete(id: task.id, completed: !task.completed)
             }) {
@@ -20,9 +20,17 @@ struct TaskRowView: View {
                     .frame(width: 20, height: 20)
                     .foregroundColor(task.completed ? Color.green : Color.gray)
             }
-            Text(task.title)
-                .foregroundColor(.black)
+            VStack(alignment: .leading, spacing: 8) {
+                Text(task.title)
+                    .foregroundColor(.black)
+                if !task.formattedDate.isEmpty {
+                    Text(task.formattedDate)
+                        .foregroundColor(.gray)
+                        .font(.caption)
+                }
+            }
             Spacer()
+            
         }
         .padding(EdgeInsets(top: 16, leading: 20, bottom: 16, trailing: 20))
     }
