@@ -22,6 +22,7 @@ struct AddTaskView: View {
     }
     
     private func handleSubmit() {
+        guard !taskTitle.isEmpty else { return }
         viewModel.addTask(title: taskTitle)
         taskTitle = ""
     }
